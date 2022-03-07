@@ -8,6 +8,7 @@
 | 2021-11-25 | [동시성과 병렬성](./20211125.pdf)                    |            |
 | 2022-02-03 | [Nested Router vs Named View](.20220203.pdf)         | Front, Vue |
 | 2022-02-03 | [Swagger](.20220203_2.pdf)                           |  REST API  |
+| 2022-03-07 | [HA(High Availability)](.20220307.pdf)               |            |
 
  
 
