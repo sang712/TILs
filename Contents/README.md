@@ -6,9 +6,9 @@
 | :--------- | ---------------------------------------------------- | :--------: |
 | 2021-09-30 | [GPS를 기반으로 AR 오브젝트를 띄우기](./20210930.md) |   Unity    |
 | 2021-11-25 | [동시성과 병렬성](./20211125.pdf)                    |            |
-| 2022-02-03 | [Nested Router vs Named View](.20220203.pdf)         | Front, Vue |
-| 2022-02-03 | [Swagger](.20220203_2.pdf)                           |  REST API  |
-| 2022-03-07 | [HA(High Availability)](.20220307.pdf)               |            |
+| 2022-02-03 | [Nested Router vs Named View](./20220203.pdf)        | Front, Vue |
+| 2022-02-03 | [Swagger](./20220203_2.pdf)                          |  REST API  |
+| 2022-03-07 | [HA(High Availability)](./20220307.pdf)              |            |
 
  
 
