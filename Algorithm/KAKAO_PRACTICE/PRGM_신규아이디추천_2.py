@@ -34,7 +34,7 @@ def solution(new_id):
 
     # 3단계
     while '..' in answer:
-        answer.replace('..', '.')
+        answer = answer.replace('..', '.')
 
     # 4단계
     # 시작이 .이면 없애는 대신 . 한 개짜리의 문자열이면 
