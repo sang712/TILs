@@ -1,6 +1,6 @@
 # 출처: 프로그래머스 - 다른 사람의 풀이
-# 해시를 사용한 풀이
 
+# 해시를 사용한 풀이
 def solution(participant, completion):
     answer = ''
     temp = 0
