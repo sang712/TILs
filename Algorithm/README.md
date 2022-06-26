@@ -13,5 +13,6 @@
 | 레벨    | 문제 이름          | 문제 유형 | 문제 링크                                                    | 작성 답안                                                    | 비고                                                         |
 | ------- | ------------------ | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Level 1 | 완주하지 못한 선수 | 해시      | [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/42576) | [답안1](Programmers/PGRM_완주하지못한선수.py)<br />[답안2](Programmers/PGRM_완주하지못한선수_2.py)<br />[답안3](Programmers/PGRM_완주하지못한선수_3.py) | 딕셔너리를 이용한 풀이<br />해시를 이용한 풀이<br />카운터를 이용한 풀이 |
-| Level 2 | 전화번호 목록      | 해시      | [프로그래머스]()                                             | [답안1](Programmers/PGRM_전화번호목록.py)<br />[답안2](Programmers/PGRM_전화번호목록_2.py) | startswith()를 이용한 풀이<br />해시(딕셔너리)를 이용한 풀이 |
+| Level 2 | 전화번호 목록      | 해시      | [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/42577) | [답안1](Programmers/PGRM_전화번호목록.py)<br />[답안2](Programmers/PGRM_전화번호목록_2.py) | startswith()를 이용한 풀이<br />해시(딕셔너리)를 이용한 풀이 |
+| Level 2 | 위장               | 해시      | [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/42578) | [답안](Programmers/PGRM_위장.py)                             |                                                              |
 
