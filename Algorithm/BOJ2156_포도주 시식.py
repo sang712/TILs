@@ -1,7 +1,13 @@
-N = int(input())
+'''
+sys.stdin.readline()을 이용하여 작성하면
+460ms 에서 84ms으로 시간을 확 줄일 수 있음
+'''
+import sys
+
+N = int(sys.stdin.readline())
 dp = [0, 0, 0]
 for i in range(N):
-    wine = int(input())
+    wine = int(sys.stdin.readline())
     if i == 0:
         dp = [wine, 0, 0]
         continue
