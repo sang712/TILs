@@ -15,9 +15,10 @@ K = []
 #         k[i] += k[i-1]
 #     K.append(k)
 
-# 3) 2차원 부분합
+# 3) 2차원 부분합 - 872ms
 for i in range(R):
     k = list(map(int, input().split()))
+    if i > 0: k[0] += K[i-1][0]
     for j in range(1, C):
         k[j] += k[j-1]
         if i > 0:
