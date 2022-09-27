@@ -11,6 +11,8 @@ building_walls는 재귀를 이용하였음
 2중 for문에서 1중 for문+list.count()로 바꾸었음
 결국 pypy로 시도하여 해결
 찾아보니 벽 세우기를 재귀로 하지 않고 조합으로 푼 사람이 있어서 해당 내용 시도 요망
+벽 세우기를 재귀로 하긴 했는데 재귀의 2중 for문을 1중으로 바꿔서 조합을 이용한 것이었음
+[2차원 배열의 행렬의 길이의 곱을 최대로 하고 시작점을 점점 늘려가면 조합을 만들 수 있다]
 '''
 from collections import deque
 import copy
@@ -29,6 +31,23 @@ for r in range(N):
 delta = [(0, 1), (1, 0), (0, -1), (-1, 0)] # 우하좌상
 
 ans = 0
+
+
+def building_walls2(start, count):
+    if count == 3:
+        spreading()
+        return
+    
+    else:
+        for num in range(start, N*M):
+            r = num // M
+            c = num % M
+            if lab[r][c] == 0:
+                lab[r][c] += 1
+                building_walls2(num, count+1)
+                lab[r][c] -= 1
+                
+
 def building_walls(count):
     if count == 3:        
         spreading()
@@ -58,5 +77,6 @@ def spreading():
     global ans
     ans = max(ans, safe_space)
     
-building_walls(0)
+# building_walls(0)
+building_walls2(0, 0)
 print(ans)
