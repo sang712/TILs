@@ -4,6 +4,8 @@
 return을 하지 말라는 것에 영감을 얻어서 구현만 하면 된다고 생각했고
 다음과 같이 구현하였음
 그렇지만 node = node.next가 왜 안 되는 것인지 이해는 되지 않음
+-> 함수 내에서 처리를 하는 것이기 때문에 reference로 가져온 node만 변화하고
+실제 ListNode에는 영향이 없음, 따라서 깊은 복사 하듯이 내부의 값을 변화 시켜주어야 함
 '''
 # Definition for singly-linked list.
 # class ListNode:
