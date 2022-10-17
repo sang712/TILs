@@ -13,6 +13,15 @@
 
 다른 사람의 속도를 따라가지 못하는 것은 아마 setdefault 함수 때문인 것 같음
 0부터 m-1까지 인덱스를 갖는 리스트를 선언하여 계산하면 빠를 수도
+
++) 이 문제와 비슷한 BOJ3673는 list를 이용해 풀었는데 1600ms초가 나와서 tc의 차이라고 생각함
+대신 해당 문제의 400ms 이하의 답이 있어서 봤는데, 조합으로 하는 것이 아니라
+nums에 카운트 하기 전에 cnt에 기존에 값을 더해주는 방법으로 시간을 단축하였음
+그도 그럴것이 N개 중에 2개를 선택하는 경우는 N-1부터 1까지 다 더하는 것이니까
+
+++) 그렇지만 결과는 생각과는 다르게, 딕셔너리 + 위의 방법 = 868ms
+리스트 + 위의 방법 = 912ms 가 나왔음
+tc별로 빠른 방법이 있고 아니고가 있는 것 같음
 '''
 N, M = map(int, input().split())
 A = list(map(int, input().split()))
@@ -20,12 +29,13 @@ A = list(map(int, input().split()))
 # acc = [0] * (N+1)
 nums = {0: 1}
 remain = 0
+cnt = 0
 for i in range(N):
     # remain = (acc[i] + A[i]) % M
     remain = (remain + A[i]) % M
     nums.setdefault(remain, 0)
+    cnt += nums[remain]
     nums[remain] += 1
-cnt = 0
-for num, num_of_num in nums.items():
-    cnt += (num_of_num * (num_of_num-1)) // 2
+# for num, num_of_num in nums.items():
+#     cnt += (num_of_num * (num_of_num-1)) // 2
 print(cnt)
