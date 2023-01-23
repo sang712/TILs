@@ -1,26 +1,34 @@
+'''
+제한 시간이 0.5초이기 때문에 분할 정복으로 직접 구현하였더니 시간초과가 나게 됨 
+4개(공간)로 나누는 조건을 달아서 하나의 공간에 포함이 되면 숫자를 더하는 식으로 접근하였음
+일반화하면 재귀로 바꿀 수도 있을 것 같음
+'''
+
 N, r, c = map(int, input().split())
 
-cnt = 0
-visited_target = False
-def check(size, row, col):
-    global visited_target
-    if visited_target:
-        return
-    
-    if size == 1:
-        global cnt
-        cnt += 1
-        if row == r and col == c:
-            visited_target = True
-        return
-    
-    
-    devide = size // 2
-    
-    check(devide, row, col)
-    check(devide, row, col + devide)
-    check(devide, row + devide, col)
-    check(devide, row + devide, col + devide)
+ans = 0
+while N != 0:
 
-check(2**N, 0, 0)
-print(cnt - 1)
+	N -= 1
+
+	# 1사분면
+	if r < 2 ** N and c < 2 ** N:
+		ans += ( 2 ** N ) * ( 2 ** N ) * 0
+
+	# 2사분면
+	elif r < 2 ** N and c >= 2 ** N: 
+		ans += ( 2 ** N ) * ( 2 ** N ) * 1
+		c -= ( 2 ** N )
+        
+	# 3사분면    
+	elif r >= 2 ** N and c < 2 ** N: 
+		ans += ( 2 ** N ) * ( 2 ** N ) * 2
+		r -= ( 2 ** N )
+        
+	# 4사분면    
+	else:
+		ans += ( 2 ** N ) * ( 2 ** N ) * 3
+		r -= ( 2 ** N )
+		c -= ( 2 ** N )
+    
+print(ans)
