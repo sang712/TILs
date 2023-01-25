@@ -22,5 +22,3 @@ for k in range(N):
             
 for row in graph:
     print(*row)
-    
-# 경로찾기 문제 끝나면 사다리 조작 문제 풀기
