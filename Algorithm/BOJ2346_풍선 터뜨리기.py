@@ -18,3 +18,28 @@ while dq:
     else:
         dq.rotate(-num)
 print(*ans)
+
+# N = int(input())
+# balloons = list(map(int, input().split()))
+# balloons = balloons[N-1:] + balloons[:N-1]
+
+# ans = []
+# idx = 1
+# direction = 1
+# move = 0
+# for _ in range(N):
+#     while move:
+#         idx = (idx + direction) % N
+#         if balloons[idx] != 0:
+#             move -= direction
+    
+#     if idx:            
+#         ans.append(idx)
+#     else:
+#         ans.append(N)
+    
+#     move = balloons[idx]
+#     direction = move // abs(move)
+#     balloons[idx] = 0
+    
+# print(*ans)
