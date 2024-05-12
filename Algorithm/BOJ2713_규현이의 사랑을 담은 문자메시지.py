@@ -1,3 +1,7 @@
+"""
+주어진 메시지가 공백으로 시작하는 경우 split()으로 자르면 해당 부분이 제거되므로
+이 부분에 유의하며 짜느라 시간이 오래 소요됨
+"""
 import sys
 input = sys.stdin.readline
 
@@ -10,15 +14,15 @@ code = {' ': '00000', 'A': '00001', 'B': '00010', 'C': '00011', 'D': '00100',
 delta = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
 for t in range(int(input())):
-    raw = input()
+    raw = input()[:-1]
     R = int(raw[:2])
     raw = raw[2:].lstrip()
     C = int(raw[:2])
     raw = raw[2:]
-    message = raw[1:-2] if C >= 10 else raw[:-2]
+    message = raw[1:] if C >= 10 else raw
     board = [['0']*C for _ in range(R)]
     visited = [[0]*C for _ in range(R)]
-    message = ''.join([code[word] for word in ' '.join(message)])
+    message = ''.join([code[word] for word in message])
     r, c = 0, 0
     i = 0
     for char in message:
